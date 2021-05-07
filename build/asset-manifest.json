@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5ae0d151.chunk.css",
+    "main.js": "/static/js/main.4eadc78e.chunk.js",
+    "main.js.map": "/static/js/main.4eadc78e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.540d9368.js",
+    "runtime-main.js.map": "/static/js/runtime-main.540d9368.js.map",
+    "static/css/2.dd430c5f.chunk.css": "/static/css/2.dd430c5f.chunk.css",
+    "static/js/2.d19ad894.chunk.js": "/static/js/2.d19ad894.chunk.js",
+    "static/js/2.d19ad894.chunk.js.map": "/static/js/2.d19ad894.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0752a953a56924c86dd22f88ba1ee7c3.js": "/precache-manifest.0752a953a56924c86dd22f88ba1ee7c3.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.dd430c5f.chunk.css.map": "/static/css/2.dd430c5f.chunk.css.map",
+    "static/css/main.5ae0d151.chunk.css.map": "/static/css/main.5ae0d151.chunk.css.map",
+    "static/js/2.d19ad894.chunk.js.LICENSE.txt": "/static/js/2.d19ad894.chunk.js.LICENSE.txt",
+    "static/media/CorruptCam.PNG": "/static/media/CorruptCam.77232105.PNG",
+    "static/media/Logos.png": "/static/media/Logos.18b1d686.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.540d9368.js",
+    "static/css/2.dd430c5f.chunk.css",
+    "static/js/2.d19ad894.chunk.js",
+    "static/css/main.5ae0d151.chunk.css",
+    "static/js/main.4eadc78e.chunk.js"
+  ]
+}

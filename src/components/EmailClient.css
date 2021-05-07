@@ -1,0 +1,37 @@
+.button-links {
+  float: left;
+  list-style-type: none;
+  margin-left: 15px;
+}
+
+.navButtons {
+  width: auto;
+}
+
+.HeaderInfo {
+  color: rgb(0, 0, 0);
+  padding-left: 50px;
+  display: flex;
+}
+
+.entireClient {
+  background-color: #fafafa;
+  width: 980px;
+  margin: 0 auto;
+  font-size: medium;
+  border: 1px solid black;
+  font-size: 100%;
+  font: arial;
+  color: black;
+}
+
+.ProfileBox {
+  width: 150px;
+  height: 60px;
+}
+
+a {
+}
+a:hover {
+  border-bottom: none;
+}

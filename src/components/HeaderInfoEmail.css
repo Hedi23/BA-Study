@@ -1,0 +1,23 @@
+.HeaderText {
+  color: rgb(32, 30, 30);
+  font-size: 15px;
+  margin: 0;
+  padding-left: 20px;
+  width: 600px;
+}
+
+.AllHeaders {
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: white;
+}
+
+.Wrapper {
+  height: 40px;
+  width: 45px;
+}
+
+.HeadingInfo {
+  font-weight: bolder;
+}
