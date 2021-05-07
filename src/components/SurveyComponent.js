@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
 import "./Survey.css";
-import Redbackground from "./RedBackground.png";
 
 class SurveyComponent extends Component {
   state = {
@@ -33,36 +32,19 @@ class SurveyComponent extends Component {
         title: "What is your background? (eg. Computer Science)",
         isRequired: true,
       },
-      // {
-      //   type: "text",
-      //   name: "emailClient",
-      //   title: "Which email clients are you using? (eg. Gmail, Outlook etc.)",
-      //   isRequired: true,
-      // },
-      // {
-      //   type: "checkbox",
-      //   name: "email device",
-      //   title: "Which device(s) are you using to check your emails?",
-      //   isRequired: true,
-      //   colCount: 5,
-      //   choices: ["Desktop", "Laptop", "Smartphone", "Tablet", "other"],
-      // },
-      // {
-      //   type: "dropdown",
-      //   name: "socialMediaTime",
-      //   title:
-      //     "How much time do you spend on Social Media per day? (eg. Facebook, Instagram, Snapchat, TikTok)",
-      //   isRequired: true,
-      //   colCount: 0,
-      //   choices: [
-      //     "None",
-      //     "Up to 30 minutes per day",
-      //     "Up to 1 hour per day",
-      //     "Up to 1 1/2 hours per day",
-      //     "Up to 2 hours per day",
-      //     "More than 2 hours per day",
-      //   ],
-      // },
+      {
+        type: "dropdown",
+        name: "Alert",
+        title:
+          "Which phishing alert helped you the most with recognizing the phishing emails",
+        isRequired: true,
+        colCount: 0,
+        choices: [
+          "Link with the red background",
+          "Blocked Link with the tooltip",
+          "Grey Overlay",
+        ],
+      },
       {
         type: "matrix",
         name: "User Experience",
@@ -115,74 +97,26 @@ class SurveyComponent extends Component {
           },
         ],
       },
-
-      {
-        type: "matrix",
-        name: "Alerts",
-        isRequired: true,
-        title:
-          "Please indicate if you agree or disagree with the following statements.",
-        columns: [
-          {
-            value: 1,
-            text: "Strongly Disagree",
-          },
-          {
-            value: 2,
-            text: "Disagree",
-          },
-          {
-            value: 3,
-            text: "Neutral",
-          },
-          {
-            value: 4,
-            text: "Agree",
-          },
-          {
-            value: 5,
-            text: "Strongly Agree",
-          },
-        ],
-        rows: [
-          {
-            value: "Red background",
-            text:
-              "The alert with the red background helped me recognize the phishing emails.",
-          },
-          {
-            value: "Overlay",
-            text:
-              "The alert with the grey overlay helped me recognize the phishing emails.",
-          },
-          {
-            value: "Red background",
-            text:
-              "The alert with the blocked link and the tooltip helped me recognize the phishing emails.",
-          },
-        ],
-      },
-
       {
         type: "text",
-        name: "Inbox aspects",
+        name: "Red background",
         isRequired: true,
         title:
-          "Which aspects of the email made you categorize it as Inbox? (key words are enough)",
+          "Which aspects of the phishing alert with the red background were helpful? (key words are enough)",
       },
       {
         type: "text",
-        name: "Spam aspects",
+        name: "Blocked Link",
         isRequired: true,
         title:
-          "Which aspects of the email made you categorize it as Spam? (key words are enough)",
+          "Which aspects of the phishing alert with the blocked link and the tooltip were helpful? (key words are enough)",
       },
       {
         type: "text",
-        name: "Bin aspects",
+        name: "Grey Overlay",
         isRequired: true,
         title:
-          "Which aspects of the email made you categorize it as Bin? (key words are enough)",
+          "Which aspects of the phishing alert with the grey overlay were helpful? (key words are enough)",
       },
     ],
   };
