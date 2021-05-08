@@ -123,7 +123,13 @@ class SurveyComponent extends Component {
 
   componentDidMount() {
     let userID = this.props.userInfo.userID;
-    this.setState({ userID: userID });
+    let emailAdress = this.props.userInfo.emailAdress;
+    let userName = this.props.userInfo.userName;
+    this.setState({
+      userID: userID,
+      emailAdress: emailAdress,
+      userName: userName,
+    });
   }
 
   //Define a callback methods on survey complete
@@ -133,9 +139,11 @@ class SurveyComponent extends Component {
     //Send to Server
     const data = {
       userID: this.state.userID,
+      emailAdress: this.state.emailAdress,
+      userName: this.state.userName,
       userAnswers: survey.data,
     };
-
+    console.log(data);
     const response = fetch("/SurveyData", {
       method: "POST",
       headers: {

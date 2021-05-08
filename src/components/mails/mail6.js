@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./MailsDefault.css";
 
 class Mail6 extends Component {
+  //Phishing email Red background
   state = {};
   render() {
     return (
@@ -15,19 +16,9 @@ class Mail6 extends Component {
         <br></br>
         <a
           href="http://www.outlookcompanyemail.digital"
+          class="internal-link"
           target="_blank"
-          onMouseEnter={() => {
-            this.props.insideEmailInfo(true, "InLink1");
-          }}
-          onMouseLeave={() => {
-            this.props.insideEmailInfo(false, "InLink1");
-          }}
-          onMouseOver={() => {
-            this.props.insideEmailInfo(true, "InLink1");
-          }}
-          onClick={() => {
-            this.props.insideEmailInfo(true, "ClickedLink1");
-          }}
+          className="background-red"
         >
           Login to Outlook Web Access
         </a>
@@ -50,8 +41,3 @@ Mail6.defaultProps = {
 };
 
 export default Mail6;
-
-
-
-
-

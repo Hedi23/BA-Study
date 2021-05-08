@@ -8,53 +8,44 @@ import { Snackbar } from "@material-ui/core";
 import EmailTopBar from "./EmailTopBar";
 import HeaderInfoEmail from "./HeaderInfoEmail";
 
-import LoadingOverlay from "react-loading-overlay"; //new code
-import BlockingLinkModal from "./mails/BlockingLinkModal"; //new code
-import random from "lodash/random"; //new code
-
 class EmailWindow extends Component {
   state = {
     printMessage: false,
     isActive: false, //overlay modal value
-    style: {display: "none"},
-    alertTemplate: random(1, 3), //use number to decide template
+    style: { display: "none" },
+    // alertTemplate: random(1, 3), //use number to decide template
     cssClass: "phishingLink",
     spinner: false,
-    email: ''
+    email: "",
   };
-
 
   resetSelectedTab = () => {
     this.props.resetSelectedTab();
     //this.props.onNewEmail(undefined);
   };
 
-
   componentDidMount() {
     // Count Every Second spent on this opened Mail
-    if(this.props.parentName === 'AllInbox'){
+    if (this.props.parentName === "AllInbox") {
       this.interval = setInterval(() => {
-        return this.props.timeCount(this.props.Email.mail.defaultProps)
-      }, 1000)
+        return this.props.timeCount(this.props.Email.mail.defaultProps);
+      }, 1000);
     }
 
     this.collectionInterval = setInterval(this.getScrollAmount, 500);
     //alert(this.state.alertTemplate);
     //new code to switch template
-    if(this.state.alertTemplate == 1) //select overlay template
-    {
-      this.setState({isActive: true});
-      this.setState({style:{display: "block"}});
+    if (this.state.alertTemplate == 1) {
+      //select overlay template
+      this.setState({ isActive: true });
+      this.setState({ style: { display: "block" } });
+    } else if (this.state.alertTemplate == 2) {
+      //selects red button highlight
+      this.setState({ cssClass: "phishingLink1" });
+    } else if (this.state.alertTemplate == 3) {
+      //selects gray button highlight
+      this.setState({ cssClass: "phishingLink2" });
     }
-    else if(this.state.alertTemplate == 2) //selects red button highlight
-    {
-      this.setState({cssClass: "phishingLink1"});
-    }
-    else if(this.state.alertTemplate == 3) //selects gray button highlight
-    {
-      this.setState({cssClass: "phishingLink2"});
-    }
-    
   }
 
   componentWillUnmount = () => {
@@ -67,7 +58,6 @@ class EmailWindow extends Component {
       isActive: !previous.isActive,
     }));
   };
-
 
   getScrollAmount = () => {
     let scrollAmount = document.getElementById("scrollContainer").scrollTop;
@@ -238,8 +228,13 @@ class EmailWindow extends Component {
             this.props.insideEmailInfo(true, "InEmailBody");
           }}
         >
-          
-          <LoadingOverlay
+          <SpecificEmail
+            userName={this.props.userName}
+            emailAdress={this.props.emailAdress}
+            insideEmailInfo={this.props.insideEmailInfo}
+            clickedLink={this.props.clickedLink}
+          ></SpecificEmail>
+          {/* <LoadingOverlay
         active={this.state.isActive}
         spinner={this.state.spinner}
         text="This link might be phishing"
@@ -258,7 +253,7 @@ class EmailWindow extends Component {
             this.setState({isActive: false});
             this.setState({style:{display: "none"}});
           }}
-           >Proceed to email</button><br /></center>
+           >Proceed to email</button><br /></center> */}
           {/* <div
           className="modal fade"
           id="blockingLinkModal"
@@ -271,9 +266,6 @@ class EmailWindow extends Component {
           <BlockingLinkModal />
         </div> */}
         </div>
-        
-        
-       
       </div>
     );
   }

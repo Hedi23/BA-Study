@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./MailsDefault.css";
 
 class Mail11 extends Component {
-  //phishing email
+  //Phishing email Red background
   state = {};
   render() {
     return (
@@ -20,18 +20,7 @@ class Mail11 extends Component {
             <a
               href="http://www.yourlogin-drive.store"
               target="_blank"
-              onMouseEnter={() => {
-                this.props.insideEmailInfo(true, "InLink1");
-              }}
-              onMouseLeave={() => {
-                this.props.insideEmailInfo(false, "InLink1");
-              }}
-              onMouseOver={() => {
-                this.props.insideEmailInfo(true, "InLink1");
-              }}
-              onClick={() => {
-                this.props.insideEmailInfo(true, "ClickedLink1");
-              }}
+              className="background-red"
             >
               http://www.yourlogin-drive.store
             </a>{" "}

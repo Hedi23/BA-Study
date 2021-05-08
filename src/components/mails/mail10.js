@@ -1,9 +1,14 @@
 import React, { Component } from "react";
+import Tooltip from "@material-ui/core/Tooltip";
+import Button from "@material-ui/core/Button";
 import "./MailsDefault.css";
 
 class Mail10 extends Component {
-  //phishing email
+  //phishing email - blocked link and tooltip
   state = {};
+  handleClick(e) {
+    e.preventDefault();
+  }
   render() {
     return (
       <div>
@@ -16,23 +21,14 @@ class Mail10 extends Component {
         </p>
         <p>
           Click{" "}
-          <a
-            href="http://www.webmail-upgradeconfirme.cymru"
-            target="_blank"
-            onMouseEnter={() => {
-              this.props.insideEmailInfo(true, "InLink1");
-            }}
-            onMouseLeave={() => {
-              this.props.insideEmailInfo(false, "InLink1");
-            }}
-            onMouseOver={() => {
-              this.props.insideEmailInfo(true, "InLink1");
-            }}
-            onClick={() => {
-              this.props.insideEmailInfo(true, "ClickedLink1");
-            }}
-          >
-            here
+          <a href="http://www.webmail-upgradeconfirme.cymru" target="_blank">
+            <Tooltip
+              title="This link is blocked as it might be phishing"
+              disableFocusListener
+              disableTouchListener
+            >
+              <Button onClick={this.handleClick}>here</Button>
+            </Tooltip>
           </a>{" "}
           to login to your account {this.props.emailAdress} for confirmation and
           upgrade

@@ -3,24 +3,27 @@ import Mail3 from "./mails/mail3";
 import Mail4 from "./mails/mail4";
 import Mail5 from "./mails/mail5";
 import Mail6 from "./mails/mail6";
-import Mail7 from "./mails/mail7";
+
 import Mail8 from "./mails/mail8";
 import Mail9 from "./mails/mail9";
 import Mail10 from "./mails/mail10";
 import Mail11 from "./mails/mail11";
-import Mail12 from "./mails/mail12";
+
 import Mail13 from "./mails/mail13";
 import Mail14 from "./mails/mail14";
 import Mail15 from "./mails/mail15";
+
 import Mail21 from "./mails/mail21";
 import Mail22 from "./mails/mail22";
 import Mail23 from "./mails/mail23";
 import Mail24 from "./mails/mail24";
 import Mail25 from "./mails/mail25";
+import Mail28 from "./mails/mail28";
 import Mail29 from "./mails/mail29";
 import Mail30 from "./mails/mail30";
 import Mail31 from "./mails/mail31";
 import Mail32 from "./mails/mail32";
+import Mail33 from "./mails/mail33";
 import Mail34 from "./mails/mail34";
 
 const Inbox = [
@@ -45,10 +48,6 @@ const Inbox = [
     visible: true,
   },
   {
-    mail: Mail7,
-    visible: true,
-  },
-  {
     mail: Mail8,
     visible: true,
   },
@@ -62,10 +61,6 @@ const Inbox = [
   },
   {
     mail: Mail11,
-    visible: true,
-  },
-  {
-    mail: Mail12,
     visible: true,
   },
   {
@@ -101,6 +96,10 @@ const Inbox = [
     visible: true,
   },
   {
+    mail: Mail28,
+    visible: true,
+  },
+  {
     mail: Mail29,
     visible: true,
   },
@@ -114,6 +113,10 @@ const Inbox = [
   },
   {
     mail: Mail32,
+    visible: true,
+  },
+  {
+    mail: Mail33,
     visible: true,
   },
   {
