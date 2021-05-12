@@ -24,6 +24,21 @@ class Mail5 extends Component {
   render() {
     return (
       <div>
+        <center style={this.state.style}>
+          This email might contain phishing link.
+          <br />{" "}
+          <button
+            type="button"
+            className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+            onClick={() => {
+              this.setState({ isActive: false });
+              this.setState({ style: { display: "none" } });
+            }}
+          >
+            Proceed to email
+          </button>
+          <br />
+        </center>
         <LoadingOverlay
           active={this.state.isActive}
           spinner={this.state.spinner}
@@ -82,21 +97,6 @@ class Mail5 extends Component {
             </body>
           </div>
         </LoadingOverlay>
-        <center style={this.state.style}>
-          This email might contain phishing link.
-          <br />{" "}
-          <button
-            type="button"
-            className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
-            onClick={() => {
-              this.setState({ isActive: false });
-              this.setState({ style: { display: "none" } });
-            }}
-          >
-            Proceed to email
-          </button>
-          <br />
-        </center>
       </div>
     );
   }
