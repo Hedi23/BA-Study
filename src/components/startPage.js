@@ -50,10 +50,30 @@ const StartPage = (props) => {
       <hr></hr>
       <h2>Requirements</h2>
       <br></br>
-      <ol style={{ listStyleType: "clear" }}>
-        <li>Laptop or PC</li>
+      <ol
+        style={{
+          listStyleType: "clear",
+        }}
+      >
+        <li
+          style={{
+            backgroundColor: "red",
+            color: "white",
+            fontWeight: "bolder",
+          }}
+        >
+          Laptop or PC
+        </li>
         <li>18 years or older</li>
-        <li>Google Chrome or Firefox Browser</li>
+        <li
+          style={{
+            backgroundColor: "red",
+            color: "white",
+            fontWeight: "bolder",
+          }}
+        >
+          Google Chrome or Firefox Browser
+        </li>
         <li>~30 minutes of spare time</li>
       </ol>
 
